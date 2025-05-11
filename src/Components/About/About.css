@@ -1,0 +1,149 @@
+.about {
+  padding: 4rem 2rem;
+  max-width: 100vw;
+  margin: auto;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #7c0000;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.underline {
+  width: 100px;
+  height: 2px;
+  background: #eee;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.underline span {
+  width: 20px;
+  height: 2px;
+  background: #f1c40f;
+  position: absolute;
+  top: 0;
+  left: 40%;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+  max-width: 1200px;
+  margin-inline: auto;
+  line-height: 1.4;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.about-list li {
+  font-size: 1.1rem;
+  color: #000;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  color: #f1c40f;
+  font-size: 1.2rem;
+}
+
+.about-desc {
+  font-size: 1.05rem;
+  color: #000;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.learn-btn {
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  color: #f1c40f;
+  background: transparent;
+  border: 2px solid #f1c40f;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.learn-btn:hover {
+  background: #f1c40f;
+  color: white;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 2rem;
+  }
+
+  .about-title {
+    margin-top: 20px;
+  }
+
+  .about-content {
+    margin-top: 50px;
+    gap: 10px;
+  }
+
+  .about-desc,
+  .about-intro {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .learn-btn {
+    width: 50%;
+  }
+
+  .about-list {
+    padding-left: 1rem;
+  }
+
+  .scroll-top-btn {
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.3rem;
+  }
+}
