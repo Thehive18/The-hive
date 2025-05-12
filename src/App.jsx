@@ -5,11 +5,8 @@ import Loader from "./Components/Loader/Loader";
 import About from "./Components/About/About";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import "./App.css";
-<<<<<<< HEAD
 import Team from "./Components/Team/Team";
 import Contact from "./Components/Contact/Contact";
-=======
->>>>>>> b11a389f0f93ed6a429ab55a1aa17cb5c50a049b
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -33,7 +30,6 @@ function App() {
         <div id="about">
           <About />
         </div>
-<<<<<<< HEAD
 
         <div id="team">
           <Team/>
@@ -42,8 +38,6 @@ function App() {
         <div id="contact">
 <Contact/>
         </div>
-=======
->>>>>>> b11a389f0f93ed6a429ab55a1aa17cb5c50a049b
       </div>
     </div>
   );
