@@ -1,3 +1,4 @@
+/* Global resets */
 * {
   margin: 0;
   padding: 0;
@@ -5,14 +6,20 @@
   font-family: "Poppins", sans-serif;
 }
 
+html,
 body {
+  width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .App {
   width: 100%;
+  overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    margin-left: 0 !important;
+  }
 }

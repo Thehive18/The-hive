@@ -214,8 +214,10 @@
   }
 
   .partners-container {
-    justify-content: center;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 
   .partners-container img {
@@ -276,7 +278,8 @@
 
   .partners-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 1.5rem;
     padding: 0 1rem;
   }

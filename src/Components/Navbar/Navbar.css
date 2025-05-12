@@ -229,3 +229,45 @@
     transform: translateY(0);
   }
 }
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+
+  .logo-image {
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .logo-text {
+    font-size: 22px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 20px;
+  }
+
+  .mobile-menu-container {
+    width: 95%;
+    height: 90%;
+    padding: 15px;
+  }
+
+  .mobile-nav-link {
+    font-size: 16px;
+  }
+
+  .mobile-login-link {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
