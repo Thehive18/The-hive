@@ -234,10 +234,13 @@ const About = () => {
               <motion.div
                 key={index}
                 className="skill-item"
+                initial="hidden"
+                whileInView="visible"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0 },
                 }}
+                viewport={{ once: true }}
               >
                 <div className="skill-info">
                   <span className="skill-name">{skill.name}</span>
