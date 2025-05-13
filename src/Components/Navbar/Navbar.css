@@ -1,0 +1,273 @@
+.navbar {
+  background-color: rgba(122, 8, 8, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logo-image {
+  height: 35px;
+  margin-right: 3px;
+  margin-left: 10px;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Desktop Navigation */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-left: 350px;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f8d948;
+}
+
+.login-button .login-link {
+  display: inline-block;
+  border: 2px solid #f3c839;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.login-button .login-link:hover {
+  background-color: #f3c839;
+  color: #fff;
+}
+
+/* Mobile Menu */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+  z-index: 1001;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(139, 0, 0, 0.95);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  opacity: 5;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 90%;
+  height: 85%;
+  max-width: 800px;
+  padding: 20px;
+  position: relative;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 30px 0;
+}
+
+.mobile-nav-item {
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.mobile-nav-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.mobile-nav-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.mobile-nav-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.mobile-nav-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.mobile-nav-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.mobile-nav-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.mobile-nav-link {
+  font-size: 18px;
+  text-decoration: none;
+  color: #8b0000;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.mobile-nav-link.active {
+  color: #f8d948;
+}
+
+.mobile-nav-link:hover {
+  color: #f8d948;
+}
+
+/* Mobile Login Button */
+.mobile-login-button {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.7s;
+}
+
+.mobile-login-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border: 2px solid #f8d948;
+  border-radius: 30px;
+  color: #8b0000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.mobile-login-link:hover {
+  background-color: #f8d948;
+}
+
+/* Desktop vs Mobile visibility */
+.desktop {
+  display: flex;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+
+  .logo-image {
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  .logo-text {
+    font-size: 22px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 20px;
+  }
+
+  .mobile-menu-container {
+    width: 95%;
+    height: 90%;
+    padding: 15px;
+  }
+
+  .mobile-nav-link {
+    font-size: 16px;
+  }
+
+  .mobile-login-link {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,439 @@
+.about {
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #7c0000;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.underline {
+  width: 100px;
+  height: 2px;
+  background: #eee;
+  margin: 0 auto 2rem auto;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.underline span {
+  width: 20px;
+  height: 2px;
+  background: #f1c40f;
+  position: absolute;
+  top: 0;
+  left: 40%;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+  max-width: 1200px;
+  margin-inline: auto;
+  line-height: 1.4;
+  margin-bottom: 60px;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.about-list li {
+  font-size: 1.1rem;
+  color: #000;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  color: #f1c40f;
+  font-size: 1.2rem;
+}
+
+.about-desc {
+  font-size: 1.05rem;
+  color: #000;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.learn-btn {
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  color: #f1c40f;
+  background: transparent;
+  border: 2px solid #f1c40f;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.learn-btn:hover {
+  background: #f1c40f;
+  color: white;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 90px 80px;
+  background-color: #f3f5fa;
+  font-family: "Segoe UI", sans-serif;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.faq-left {
+  flex: 1;
+}
+
+.faq-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #7a0808;
+}
+
+.faq-left h2 span {
+  font-size: 45px;
+  font-weight: bold;
+  color: #7a0808;
+}
+
+.faq-left p {
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: left;
+}
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #fff9d6;
+}
+
+.faq-question.open {
+  background-color: #fffbea;
+}
+
+.faq-number {
+  color: #f9c61b;
+  font-weight: bold;
+}
+
+.arrow {
+  margin-left: auto;
+  color: #f1c40f;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+/* Rotate arrow when open */
+.faq-question.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Hover effect for arrow */
+.faq-question:hover .arrow {
+  color: #f1c40f;
+  transform: scale(1.1);
+}
+
+.faq-answer {
+  padding: 0 20px 20px;
+  font-size: 16px;
+  color: #909090;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.faq-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-right img {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Skills Section Styles */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 90px 80px;
+  background-color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.skills-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.skills-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  color: #7c0000;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.skills-description {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.skills-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: #7c0000;
+  font-size: 12px;
+}
+
+.skill-percentage {
+  font-weight: 600;
+  color: #7c0000;
+}
+
+.skill-bar-bg {
+  width: 100%;
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background-color: #f1c40f;
+  border-radius: 1px;
+  transition: width 1s ease;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .faq-container {
+    padding: 50px 30px;
+    gap: 2.5rem;
+  }
+
+  .faq-right {
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+  .faq-left {
+    margin-top: -20px;
+  }
+  .skills-container {
+    padding: 60px 40px;
+    gap: 3rem;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 40px 20px;
+    gap: 2rem;
+    flex-direction: column-reverse;
+  }
+
+  .faq-right {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .faq-left {
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
+
+  .faq-left h2 {
+    font-size: 28px;
+  }
+
+  .faq-left h2 span {
+    font-size: 36px;
+  }
+
+  .faq-left p {
+    font-size: 15px;
+  }
+
+  .faq-question {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    font-size: 15px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    padding: 50px 50px;
+    gap: 2rem;
+  }
+
+  .skills-left,
+  .skills-right {
+    width: 100%;
+  }
+
+  .skills-left {
+    margin-top: 2rem;
+  }
+
+  .skills-title {
+    text-align: left;
+  }
+
+  .skills-description {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-container {
+    padding: 30px 15px;
+    flex-direction: column-reverse;
+  }
+
+  .faq-right {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-left h2 {
+    font-size: 24px;
+  }
+
+  .faq-left h2 span {
+    font-size: 30px;
+  }
+
+  .arrow {
+    font-size: 1.1rem;
+  }
+
+  .skills-container {
+    padding: 40px 20px;
+  }
+
+  .skills-title {
+    font-size: 1.8rem;
+  }
+
+  .skills-description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+}

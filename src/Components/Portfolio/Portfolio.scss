@@ -1,0 +1,199 @@
+.portfolio {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f8f8f8;
+
+  .title, h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+     color:  #7a0808;
+   
+    
+  }
+
+  .underline {
+    width: 80px;
+    height: 4px;
+    background: goldenrod;
+    margin: 0 auto 1rem;
+  }
+
+  .description {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; 
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    button {
+      padding: 0.3rem 1.5rem;
+      border: none;
+      background-color: #eee;
+      cursor: pointer;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: 0.3s ease;
+
+      &.active,
+      &:hover {
+        background-color: goldenrod;
+        color: white;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 1rem; 
+
+    .card {
+      position: relative;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 400px;
+      width: 100%; 
+      text-align: center; 
+
+      img {
+        width: 100%;
+        height: 40vh;
+        display: block;
+        cursor: pointer; 
+      }
+
+      .overlay {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent; // Removed round plus background
+        padding: 0;
+        border-radius: 0;
+        color: transparent; // Hide the plus icon
+        cursor: pointer;
+        font-size: 0; // Hide text
+        transition: 0.3s ease;
+        // Overlay is now just a trigger area
+      }
+    }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; // Ensure modal is above all other content
+
+    .close {
+      position: absolute;
+      top: 1.5rem; // Increased top padding for visibility
+      right: 2.5rem; // Increased right padding for visibility
+      font-size: 2.5rem; // Increased font size for better visibility
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+      z-index: 1001; // Ensure close button is above the modal content
+
+      &:hover {
+        color: goldenrod;
+      }
+    }
+
+    img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+
+    .modal-controls {
+      margin-top: 1rem;
+
+      button {
+        margin: 0 1rem;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        background: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+
+        &:hover {
+          background: goldenrod;
+          color: white;
+        }
+      }
+    }
+  }
+
+  // Desktop-specific centering (above 768px)
+  @media (min-width: 769px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr); // Maintain 3 columns on desktop
+      justify-items: center; // Ensure cards are centered in their grid cells
+      margin: 0 auto; // Center the grid container
+      padding: 0 1rem; // Add padding for better spacing
+      width: fit-content; // Ensure grid width adjusts to content
+    }
+
+    .card {
+      display: flex;
+      justify-content: center; // Center the image within the card
+      align-items: center;
+    }
+
+    // Specific centering for Web, Graphics, and Games
+    .grid[data-category="Web"],
+    .grid[data-category="Graphics"],
+    .grid[data-category="Games"] {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 1200px;
+
+      .card {
+        margin: 0 auto; // Center each card individually
+        max-width: 400px;
+      }
+    }
+  }
+
+  // Mobile responsiveness (below 768px)
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; // Single column on mobile
+      justify-items: center; // Keep images centered
+    }
+
+    .buttons {
+      flex-wrap: nowrap; // Keep buttons on one line
+      justify-content: center;
+      gap: 0.5rem; // Reduce gap on small screens
+    }
+  }
+}
