@@ -1,50 +1,56 @@
-import supabase from "../lib/supabase.js";
 import User from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 
-const storeRefreshToken = async (userId, refreshToken) => {
-  try {
-    const { data, error } = await supabase
-      .from('refresh_tokens')
-      .insert([{ user_id: userId, refresh_token: refreshToken, created_at: new Date() }]);
+// import RefreshToken from "../models/RefreshTxoken.js"; // adjust the path
 
-    if (error) {
-      console.error("Error in storeRefreshToken controller:", error.message);
-      return;
-    }
-    console.log('Refresh token stored successfully:', data);
-  } catch (error) {
-    console.error("Unexpected error in storeRefreshToken controller:", error.message);
-  }
-};
+
+
+
 
 const generateTokens = (userId) => {
   const accessToken = jwt.sign({ userId }, process.env.ACCESS_TOKEN_SECRET, {
     expiresIn: "15m",
   });
+
   const refreshToken = jwt.sign({ userId }, process.env.REFRESH_TOKEN_SECRET, {
     expiresIn: "7d",
   });
+
   return {
     accessToken,
-    refreshToken
+    refreshToken,
   };
+};
+const storeRefreshToken = async (userId, refreshToken) => {
+  try {
+    const token = new RefreshToken({
+      userId,
+      refreshToken,
+    });
+
+    await token.save();
+    console.log("Refresh token stored successfully:", token);
+  } catch (error) {
+    console.error("Error storing refresh token:", error.message);
+  }
 };
 
 const setCookies = (res, accessToken, refreshToken) => {
   res.cookie("accessToken", accessToken, {
-    httpOnly: true,
-    sameSite: "none",
-    secure: process.env.NODE_ENV === "production",
-    maxAge: 15 * 60 * 1000,
+    httpOnly: true, // Prevent client-side access
+    sameSite: "none", // Allows cross-site cookies (needed if frontend is on a different domain)
+    secure: process.env.NODE_ENV === "production", // Only HTTPS in production
+    maxAge: 15 * 60 * 1000, // 15 minutes in milliseconds
   });
+
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     sameSite: "none",
     secure: process.env.NODE_ENV === "production",
-    maxAge: 7 * 24 * 60 * 60 * 1000,
+    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
   });
 };
+
 
 export const signup = async (req, res) => {
   const { email, password, name } = req.body;
@@ -94,6 +100,15 @@ export const login = async (req, res) => {
     }
   } catch (error) {
     console.error("Error in login controller", error.message);
+    res.status(500).json({ message: error.message });
+  }
+};
+export const delUser = async (req, res) => {
+  try {
+    await User.findByIdAndDelete(req.params.id);
+    res.json({ message: "User deleted successfully" });
+  } catch (error) {
+    console.error("Error in delUser controller", error.message);
     res.status(500).json({ message: error.message });
   }
 };
@@ -157,10 +172,10 @@ export const refreshToken = async (req, res) => {
   }
 };
 
-export const getProfile = async (req, res) => {
-  try {
-    res.json(req.user);
-  } catch (error) {
-    res.status(500).json({ message: "Server error", error: error.message });
-  }
-};
+// export const getProfile = async (req, res) => {
+//   try {
+//     res.json(req.user);
+//   } catch (error) {
+//     res.status(500).json({ message: "Server error", error: error.message });
+//   }
+// };
