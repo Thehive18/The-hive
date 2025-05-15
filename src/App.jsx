@@ -46,6 +46,14 @@ function App() {
         <div id="footer">
           <Footer/>
         </div>
+
+        <div>
+          <Newsletter/>
+        </div>
+
+        <div>
+          <Footer/>
+        </div>
       </div>
     </div>
   );
