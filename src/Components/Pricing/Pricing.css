@@ -1,0 +1,171 @@
+.pricing-section {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .pricing-title {
+    color: #700000;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .pricing-subtitle {
+    font-size: 14px;
+    margin: 10px 0 40px;
+    color: #555;
+  }
+  
+  .pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .pricing-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    width: 300px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .pricing-card.highlighted {
+    border-top: 5px solid #f2c115;
+  }
+  
+  .pricing-card h3 {
+    color: #700000;
+    margin-bottom: 15px;
+  }
+  
+  .price .amount {
+    font-size: 32px;
+    color: #700000;
+    font-weight: bold;
+  }
+  
+  .price .per {
+    display: block;
+    color: #f2c115;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .features li {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .included {
+    color: green;
+  }
+  
+  .excluded {
+    color: #ccc;
+    text-decoration: line-through;
+  }
+  
+  .btn-started {
+    background: transparent;
+    border: 2px solid #f2c115;
+    color: #f2c115;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-started:hover {
+    background: #f2c115;
+    color: white;
+  }
+  @media (max-width: 768px) {
+    .pricing-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+
+  .pricing-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    width: 300px;
+    transition: all 0.4s ease;
+    position: relative;
+    transform: scale(1);
+  }
+  
+  /* Highlighted plan gets a subtle scale by default */
+  .pricing-card.highlighted {
+    border-top: 5px solid #f2c115;
+    transform: scale(1.03);
+  }
+  
+  /* Hover animation */
+  .pricing-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  
+  /* Button hover */
+  .btn-started {
+    background: transparent;
+    border: 2px solid #f2c115;
+    color: #f2c115;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-started:hover {
+    background: #f2c115;
+    color: white;
+    box-shadow: 0 5px 15px rgba(242, 193, 21, 0.4);
+  }
+  
+  /* Smooth card entrance animation */
+  .pricing-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  .pricing-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .pricing-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .pricing-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+    

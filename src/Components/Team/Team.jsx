@@ -2,6 +2,7 @@ import React from "react";
 import "./Team.css";
 import teamLogo from "./teamLogo.png"; // replace with your actual logo
 
+
 const teamMembers = [
   {
     name: "Lorem Isplur",
@@ -49,6 +50,7 @@ const Team = () => {
           </div>
         ))}
       </div>
+   
     </div>
   );
 };

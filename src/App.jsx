@@ -9,6 +9,7 @@ import Team from "./Components/Team/Team";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Newsletter from "./Components/Newsletter/Newsletter";
+import Pricing from "./Components/Pricing/Pricing";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -36,23 +37,19 @@ function App() {
         <div id="team">
           <Team />
         </div>
-<div>
-  <Newsletter/>
-</div>
+
+        <div>
+          <Pricing />
+        </div>
+        <div>
+          <Newsletter />
+        </div>
         <div id="contact">
           <Contact />
         </div>
 
         <div id="footer">
-          <Footer/>
-        </div>
-
-        <div>
-          <Newsletter/>
-        </div>
-
-        <div>
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </div>
