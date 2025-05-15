@@ -1,0 +1,156 @@
+.services-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e6f0fa 0%, #f5f5f5 100%); 
+  text-align: center;
+
+  .services-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #7c0000;
+    margin-bottom: 20px;
+    position: relative; 
+
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #f4c430; 
+      transition: width 0.3s ease;
+    }
+
+    &:hover:after {
+      width: 100px; 
+    }
+  }
+
+  .services-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .service-card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      transition: transform 0.3s ease;
+
+      
+      &:hover {
+        animation: float 1.5s ease-in-out infinite; 
+      }
+
+      .service-icon {
+        font-size: 24px;
+        color: #f4c430; 
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #7c0000; 
+        margin-bottom: 15px;
+        transition: color 0.3s ease; 
+
+       
+        &:hover {
+          color: #f4c430; 
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+      }
+    }
+  }
+
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); 
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .services-heading {
+      font-size: 36px;
+
+      &:after {
+        bottom: -8px; 
+        width: 40px; 
+      }
+
+      &:hover:after {
+        width: 80px; 
+      }
+    }
+
+    .services-subtitle {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr; 
+      gap: 20px;
+      max-width: 400px; 
+      margin: 0 auto;
+
+      .service-card {
+        padding: 40px;
+
+        .service-icon {
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+
+        h3 {
+          font-size: 20px;
+
+          &:hover {
+            color: #f4c430;
+          }
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        
+        &:hover {
+          animation: float 1.5s ease-in-out infinite; 
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Team.css";
-import teamLogo from "./teamLogo.png"; // replace with your actual logo
-
+import teamLogo from "./teamLogo.png"; 
 
 const teamMembers = [
   {
@@ -50,7 +49,6 @@ const Team = () => {
           </div>
         ))}
       </div>
-   
     </div>
   );
 };
