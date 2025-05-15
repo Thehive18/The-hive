@@ -7,6 +7,8 @@ import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import "./App.css";
 import Team from "./Components/Team/Team";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
+import Newsletter from "./Components/Newsletter/Newsletter";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -32,11 +34,17 @@ function App() {
         </div>
 
         <div id="team">
-          <Team/>
+          <Team />
+        </div>
+<div>
+  <Newsletter/>
+</div>
+        <div id="contact">
+          <Contact />
         </div>
 
-        <div id="contact">
-<Contact/>
+        <div id="footer">
+          <Footer/>
         </div>
       </div>
     </div>
